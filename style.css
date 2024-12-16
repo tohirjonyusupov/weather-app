@@ -18,7 +18,6 @@ body {
 	background-color: #343d4b;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 }
 
@@ -28,7 +27,7 @@ body {
 	        box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
 	background-color: #222831;
 	color: #ffffff;
-	height: 400px;
+	height: 300px;
 }
 
 .location-container {
@@ -40,7 +39,7 @@ body {
 	color: #323f52;
 }
 
-.location-button {
+.location-button, .date-button {
 	outline: none;
 	width: 100%;
 	-webkit-box-sizing: border-box;
@@ -58,7 +57,7 @@ body {
 	transition: transform 200ms ease, -webkit-transform 200ms ease;
 }
 
-.location-button:hover {
+.location-button:hover, .date-button:hover {
 	-webkit-transform: scale(0.95);
 	    -ms-transform: scale(0.95);
 	        transform: scale(0.95);
@@ -68,6 +67,19 @@ body {
 	height: 1em;
 	width: auto;
 	margin-right: 5px;
+}
+
+.date-container {
+	text-align: center;
+	color: #ffffff;
+}
+
+.date-container label {
+	margin-bottom: 75px;
+}
+
+.date-button {
+	width: 100px;
 }
 
 .weather-side {
@@ -233,4 +245,68 @@ body {
 	text-align: center;
 	margin: 10px 0 0 0;
 	font-weight: 700;
+}
+
+.footer {
+  display: flex;
+	width: 70%;
+  background: white;
+  border-top: solid 4px #5AC8F2;
+	border-radius: 15px;
+  margin: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.footer div {
+	width: 700px;
+	padding: 10px;
+	border-right: 1px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer div:hover {
+	background: rgb(230, 224, 224);
+	cursor: pointer;
+}
+
+.footer div:first-child:hover {
+	background: rgb(230, 224, 224);
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+.footer div:last-child:hover {
+	background: rgb(230, 224, 224);
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+.footer div img {
+	width: 40px;
+	margin: 0 auto;
+}
+.footer div:last-child {
+	border-right: none;
+}
+
+.footer div i {
+	color: yellow;
+	opacity: 0.7;
+	font-size: 30px;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+.footer div p {
+  width: 100%;
+  text-align: center;
+}
+.footer div span.hour {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: #444;
+  font-weight: lighter;
 }
