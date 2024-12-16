@@ -80,7 +80,6 @@ function displayCurrentWeather(current, location, response) {
     displayHourlyWeather(response.data.forecast.forecastday[0])
     document.querySelectorAll('#date').forEach(date => {
       date.addEventListener('click', (e) => {
-        console.log(e.target.value);
         displayForecastWeather(response.data.forecast.forecastday[e.target.value], response.data.location)
         displayHourlyWeather(response.data.forecast.forecastday[e.target.value])
       })
@@ -88,8 +87,6 @@ function displayCurrentWeather(current, location, response) {
 }
 function displayHourlyWeather(forecast) {
   footer.innerHTML = ''
-
-  // console.log(forecast);
   for (let i = 0; i < forecast.hour.length; i += 3) {
     const h = forecast.hour[i]
     footer.innerHTML += `
@@ -101,7 +98,7 @@ function displayHourlyWeather(forecast) {
 }
 function displayForecastWeather(forecast, location) {
   container.innerHTML = ''
-  console.log(forecast);
+  
   const time = new Date(forecast.date)
     const currentDay = time.getDate()
     const currentDayName = daysOfWeek[time.getDay()]
